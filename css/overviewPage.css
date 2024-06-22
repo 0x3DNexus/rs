@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description{
+    width: 500px;
+    text-align: justify;
+    margin-bottom: 100px;
+}
+
+.html, .css, .js, .node, .cpp{
+    margin: 25px;
+    position: relative;
+}
+
+.outerBar{
+    background-color: #232627;
+    width: 500px;
+    height: 2px;
+}
+
+.innerBar{
+    height: 2px;
+    background-color: orange;
+}
+
+.percentages{
+    position: absolute;
+    top: 0;
+}
+

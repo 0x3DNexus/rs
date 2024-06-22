@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", monospace, sans-serif;
+    box-sizing: border-box;
+}
+
+.navBar{
+    width: 99vw;
+    max-width: 99vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navItem{
+    margin: 35px;
+    font-size: medium;
+    color: #a0a0a0;
+}
