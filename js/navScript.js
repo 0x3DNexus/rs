@@ -1,56 +1,49 @@
-console.log("Horray outside")
+let navItems = document.querySelectorAll('.navItem a');
+let currentUnderlinedItem = null;
 
-document.addEventListener('DOMContentLoaded', () =>{
-    let navItems = document.querySelectorAll('.navItem');
-    console.log(navItems);
-    let currentUnderlinedItem = null;
+currentUnderlinedItem = navItems[0];
+addUnderline(navItems[0]);
 
-    console.log("Horray inside")
+navItems.forEach(item => {
 
-    addUnderline(navItems[0]);
-    currentUnderlinedItem = navItems[0];
+    item.addEventListener('mouseover', () => {
+        item.style.cursor = 'pointer';
 
-    navItems.forEach(item =>{
+        //if the current item is focused do not apply the effects
+        if (item === currentUnderlinedItem) return;
 
-        item.addEventListener('mouseover', () =>{
-            item.style.cursor = 'pointer';
-
-            //if the current item is focused do not apply the effects
-            if(item === currentUnderlinedItem) return;
-
-            item.style.color = 'white';
-            item.style.transitionDuration = '0.2s';
-        })
-    
-        item.addEventListener('mouseout', () =>{
-            //if the current item is focused do not apply the effects
-            if(item === currentUnderlinedItem) return;
-
-            item.style.color = '#a0a0a0';
-            item.style.transitionDuration = '0.2s';
-        })
-
-        item.addEventListener('click', () =>{
-            
-            if(currentUnderlinedItem !== item){
-                removeUnderline(currentUnderlinedItem);
-            }
-
-            addUnderline(item);
-        })
-
+        item.style.color = 'white';
+        item.style.transitionDuration = '0.2s';
     })
 
-    function addUnderline(item){
-        item.style.textDecoration = 'underline';
-        item.style.textDecorationColor = '#e64a19';
-        item.style.textDecorationThickness = '3px';
-        item.style.color = 'white';
-        currentUnderlinedItem = item;
-    }
+    item.addEventListener('mouseout', () => {
+        //if the current item is focused do not apply the effects
+        if (item === currentUnderlinedItem) return;
 
-    function removeUnderline(currentUnderlinedItem){
-        currentUnderlinedItem.style.textDecoration = 'none';
-        currentUnderlinedItem.style.color = '#a0a0a0';
-    }
+        item.style.color = '#a0a0a0';
+        item.style.transitionDuration = '0.2s';
+    })
+
+    item.addEventListener('click', () => {
+
+        if (currentUnderlinedItem !== item) {
+            removeUnderline(currentUnderlinedItem);
+        }
+
+        addUnderline(item);
+    })
+
 })
+
+function addUnderline(item) {
+    item.style.textDecoration = 'underline';
+    item.style.textDecorationColor = '#e64a19';
+    item.style.textDecorationThickness = '3px';
+    item.style.color = 'white';
+    currentUnderlinedItem = item;
+}
+
+function removeUnderline(currentUnderlinedItem) {
+    currentUnderlinedItem.style.textDecoration = 'none';
+    currentUnderlinedItem.style.color = '#a0a0a0';
+}

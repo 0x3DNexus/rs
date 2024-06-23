@@ -3,67 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="overviewPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/overviewPage.css">
     <title>overview Page</title>
 </head>
 <body>
+    <div class="aboutMe">
+        <h3 class="heading1">About Me</h3>
+        <img src="./luffy.jpg">
 
-    <div class="about">
-        <p>About Me</p>
-        <p class="description">Hi, I am Nexus ! I am 21 years old and I'm from India. I am a student and still in the learning process,
-           I share interest in the technology field and hence decided to build my career here. I generally make webpages
-           and also do backend Development. I am in the lookout for oppurtunities that will promote in the growth of
-           my knowledge and boost my skills even more. Currently I am open to work and can even offer free service to
-           showcase my work and also get references.  
-        </p>
-    </div>
+        <div class="info">    
 
-    <div class="skills">
-        <h4>Skills</h4>
+            <p class="info_p_Tag">Hi, I am Nexus ! I am 21 years old and I'm from India. I am a student and still in the learning process,
+                I share interest in the technology field and hence decided to build my career here. I generally make webpages
+                and also do backend Development. I am in the lookout for oppurtunities that will promote in the growth of
+                my knowledge and boost my skills even more. Currently I am open to work and can even offer free service to
+                showcase my work and also get references.  
+            </p>
 
-        <div class="html">
-            <p>HTML</p>
-            <span class="percentages" id="spanOkay">70%</span>
-            <div class="outerBar">
-                <div class="innerBar" id="okay" style="width: 70%;"></div>
-            </div>    
+            <div class="infoList">
+                <ul class="list" style="list-style-type: none;">
+                    <li><strong>Name: </strong>Nexus</li>
+                    <li><strong>Age: </strong>21 years</li>
+                    <li><strong>Career: </strong>Developer [Learning]</li>
+                    <li><strong>Nationality: </strong>Indian</li>
+                    <li><strong>Email: </strong>thisthat123@example.com</li>
+                </ul>
+            </div>
+
+            <button class="resumeBtn">Download Resume</button>
         </div>
-        
-        <div class="css">
-            <p>CSS</p>
-            <span class="percentages">50%</span>
-            <div class="outerBar">
-                <div class="innerBar" style="width: 50%;"></div>
-            </div>   
-        </div>
-        
-        <div class="js">
-            <p>JavaScript</p>
-            <span class="percentages">75%</span>
-            <div class="outerBar">
-                <div class="innerBar" style="width: 75%;"></div>
-            </div>   
-        </div>
-        
-        <div class="node">
-            <p>NodeJS</p>
-            <span class="percentages">50%</span>
-            <div class="outerBar">
-                <div class="innerBar" style="width: 50%;"></div>
-            </div>   
-        </div>
-        
-        <div class="cpp">
-            <p>C++</p>
-            <span class="percentages">70%</span>
-            <div class="outerBar">
-                <div class="innerBar" style="width: 70%;"></div>
-            </div>   
-        </div>
+
     </div>
     
+    <div class="skills"></div>
+    
+    <div class="experience"></div>
+    
     <div class="links"></div>
-
-    <script src="script.js"></script>
+    
+    <div class="hobbies"></div>
 </body>
 </html>

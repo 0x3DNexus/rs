@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto Mono", monospace, sans-serif;
 }
 
 body{
@@ -12,30 +13,71 @@ body{
     align-items: center;
 }
 
-.description{
-    width: 500px;
+.aboutMe{
+    width: 970px;
     text-align: justify;
-    margin-bottom: 100px;
-}
-
-.html, .css, .js, .node, .cpp{
-    margin: 25px;
+    font-size: medium;
+    letter-spacing: 0.5px;
     position: relative;
+    border: 2px solid white;
 }
 
-.outerBar{
-    background-color: #232627;
-    width: 500px;
-    height: 2px;
+.info{
+    margin-left: 130px;
 }
 
-.innerBar{
-    height: 2px;
-    background-color: orange;
+.info_p_Tag{
+    margin-bottom: 30px;
 }
 
-.percentages{
-    position: absolute;
-    top: 0;
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px -1px white;
+    filter: brightness(130%);
+    float: left;
+    margin: 40px;
 }
 
+.list{
+    text-align: start;
+    font-size: 13.5px;
+    letter-spacing: normal;
+    padding: 0;
+    padding-inline-start: 50px;
+}
+
+.list li{
+    display: inline-block;
+    width: 32%;
+    margin: 12px 0 0 0;
+    padding: 0;
+}
+
+strong{
+    color: #862b08;
+}
+
+.resumeBtn{
+    margin: 30px 0 0 50px;
+    width: 150px;
+    height: 45px;
+    font-size: small;
+    background-color: orangered;
+    outline: none;
+    /* border: 0.5px solid #a0a0a0; */
+    border: none;
+    transition: 0.2s ease;
+}
+
+.resumeBtn:hover{
+    background-color: #181a1b;
+    color: white;
+    cursor: pointer;
+}
+
+.resumeBtn:not(:hover){
+    background-color: orangered;
+    color: #a0a0a0;
+}

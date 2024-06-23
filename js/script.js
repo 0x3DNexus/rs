@@ -1,69 +1,27 @@
-document.addEventListener('DOMContentLoaded', async () =>{
-    // let navItems = document.querySelectorAll('.navItem');
-    // let itemFocus = true;
-    // let currentUnderlinedItem = null;
+document.addEventListener('DOMContentLoaded', () =>{
 
-    // addUnderline(navItems[0]);
-    // currentUnderlinedItem = navItems[0];
+    //add active navBar and content properties
+    let navTabs = document.querySelectorAll('.navEl');
+    let contents = document.querySelectorAll('.contentDiv');
 
-    // navItems.forEach(item =>{
+    navTabs.forEach(tab =>{
 
-    //     item.addEventListener('mouseover', () =>{
-    //         item.style.cursor = 'pointer';
+        tab.addEventListener('click', () =>{
 
-    //         //if the current item is focused do not apply the effects
-    //         if(item === currentUnderlinedItem) return;
+            //remove active class from all the tabs
+            navTabs.forEach(t => {t.classList.remove('active')})
+            tab.classList.add('active');
 
-    //         item.style.color = 'white';
-    //         item.style.transitionDuration = '0.2s';
-    //     })
-    
-    //     item.addEventListener('mouseout', () =>{
-    //         //if the current item is focused do not apply the effects
-    //         if(item === currentUnderlinedItem) return;
+            const targetContent = tab.getAttribute('id');
 
-    //         item.style.color = '#a0a0a0';
-    //         item.style.transitionDuration = '0.2s';
-    //     })
-
-    //     item.addEventListener('click', () =>{
-            
-    //         if(currentUnderlinedItem !== item){
-    //             removeUnderline(currentUnderlinedItem);
-    //         }
-
-    //         addUnderline(item);
-    //     })
-
-    // })
-
-    // function addUnderline(item){
-    //     item.style.textDecoration = 'underline';
-    //     item.style.textDecorationColor = '#e64a19';
-    //     item.style.textDecorationThickness = '3px';
-    //     item.style.color = 'white';
-    //     currentUnderlinedItem = item;
-    // }
-
-    // function removeUnderline(currentUnderlinedItem){
-    //     currentUnderlinedItem.style.textDecoration = 'none';
-    //     currentUnderlinedItem.style.color = '#a0a0a0';
-    // }
-
-
-    //overView Page Content Logic
-
-    // let innerBarWidth = window.getComputedStyle(document.querySelector('#okay')).width;
-    // innerBarWidth = parseInt(innerBarWidth) - 30;
-    // let percentage = document.querySelector('#spanOkay');
-
-    // percentage.style.left = innerBarWidth + 'px';
-
-    // let placeholder = document.querySelector('.navPlaceholder');
-    let response = await fetch('navbar.html');
-    console.log(response);
-    // placeholder.innerHTML = nav;
-    const data = await response.text(); // Extract the text content from the response
-    document.querySelector('.navPlaceholder').innerHTML = data;
-    console.log('data Upadted')
+            contents.forEach(this_content =>{
+                if(targetContent === this_content.id){
+                    this_content.classList.add('active');
+                }
+                else{
+                    this_content.classList.remove('active');
+                }
+            })
+        })
+    })
 })

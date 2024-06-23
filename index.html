@@ -6,40 +6,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet", href="./css/homePageCss.css">
-    <link rel="stylesheet" href="./css/navBar.css">
+    <link rel="stylesheet", href="./css/style.css">
     <title>Resume Website</title>
 </head>
 <body>
-    <!-- <div class="navBar">
-        <span class="navItem">Home</span>
-        <span class="navItem">OverView</span>
-        <span class="navItem">Projects</span>
-        <span class="navItem">Contact-Me</span>
-    </div> -->
-    <div class="navPlaceholder"></div>
+    <div class="navBar">
+        <span id="home" class="navEl active">Home</span>
+        <span id="overview" class="navEl">Overview</span>
+        <span id="projects" class="navEl">Projects</span>
+        <span id="contact" class="navEl">Contact-Me</span>
+    </div>
     
     <div class="content">
 
-        <div class="homeContent">
-            
+        <div id="home" class="contentDiv active">
+
             <div class="pic"></div>
             <div class="hi">Hi, I am Nexus !</div>
-            <div class="whoAmI">
-                <p>
-                    I am a rookie backend and Software Developer and
-                    As a rookie developer, I am dedicated to honing my
-                    skills and delivering efficient, reliable solutions.
-                    Explore my projects and see how I can contribute to
-                    your next development endeavor.
-                </p>
-            </div>
-
+            <p class="whoAmI">
+                I am a rookie backend and Software Developer and
+                As a rookie developer, I am dedicated to honing my
+                skills and delivering efficient, reliable solutions.
+                Explore my projects and see how I can contribute to
+                your next development endeavor.
+            </p>
         </div>
 
-    </div>
+        <div id="overview" class="conentDiv"></div>
+        
+        <div id="projects" class="conentDiv"></div>
+        
+        <div id="contact" class="conentDiv"></div>
+
     
     <script src="./js/script.js"></script>
-    <script src="./js/navScript.js"></script>
 </body>
 </html>
